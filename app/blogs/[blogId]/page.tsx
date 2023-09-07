@@ -10,6 +10,9 @@ type BlogPageParams = {
 
 type BlogPageProps = NextComponentPropsWithParams<BlogPageParams>;
 
+/**
+ * `[blogId]` as the __folder name__ provides a params `object` with `blogId` as a key
+ */
 export default async function BlogPage({ params }: BlogPageProps) {
   const blog = blogs.find((b) => b.id === params.blogId);
 

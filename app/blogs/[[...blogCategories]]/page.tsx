@@ -8,10 +8,16 @@ type BlogsCategoryFilterPageProps = NextComponentPropsWithParams<{
   blogCategories?: string[];
 }>;
 
+/**
+ * This page acts as both the catch-all page as well as the main page for /blogs
+ */
 const BlogsCategoryFilterPage = ({ params }: BlogsCategoryFilterPageProps) => {
+  // Catch all routes return data as an array of route params
+  // ex: /blogs/x/y/z -> [x, y, z]
   const blogCategories = params.blogCategories;
   let filteredBlogs: Blog[] = blogs;
 
+  // If the blogCategories array is not empty, filter the blogs array
   if (blogCategories) {
     const filteredCategories = blogCategories.filter((c) => c !== "categories");
     if (filteredCategories?.length >= 1) {
