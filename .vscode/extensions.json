@@ -1,0 +1,14 @@
+{
+ "recommendations": [
+  "esbenp.prettier-vscode",
+  "antfu.vite",
+  "tyriar.lorem-ipsum",
+  "formulahendry.auto-rename-tag",
+  "dsznajder.es7-react-js-snippets",
+  "ecmel.vscode-html-css",
+  "sburg.vscode-javascript-booster",
+  "christian-kohler.npm-intellisense",
+  "csstools.postcss",
+  "bradlc.vscode-tailwindcss"
+ ]
+}
