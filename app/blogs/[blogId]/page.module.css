@@ -1,0 +1,6 @@
+.content {
+  [class~="code-background"] {
+    @apply px-2 py-4;
+    @apply bg-neutral-700 text-white;
+  }
+}

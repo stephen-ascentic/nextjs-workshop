@@ -1,0 +1,17 @@
+.navItem {
+  @apply py-4;
+
+  &:hover {
+    @apply underline underline-offset-4;
+  }
+}
+
+.layoutHeader {
+  @apply flex items-center justify-between;
+  @apply px-4;
+
+  h1 {
+    @apply text-2xl;
+    @apply font-mono;
+  }
+}

@@ -1,0 +1,12 @@
+.introSection {
+  @apply h-[80dvh];
+  @apply flex flex-col items-center justify-center gap-4;
+}
+
+.checkoutBlogsLink {
+  @apply flex items-center gap-x-2;
+
+  &:hover {
+    @apply underline underline-offset-4;
+  }
+}

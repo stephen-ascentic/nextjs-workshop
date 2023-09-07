@@ -1,0 +1,20 @@
+.card {
+  @apply flex flex-col gap-4;
+  @apply relative;
+  @apply bg-white;
+  @apply rounded-md;
+  @apply shadow-md;
+  @apply p-4;
+  @apply transition-all duration-200 scale-100;
+  @apply border border-transparent;
+  @apply h-full;
+
+  h1 {
+    @apply text-xl;
+  }
+
+  &:hover {
+    @apply scale-105;
+    @apply border border-gray-300;
+  }
+}
