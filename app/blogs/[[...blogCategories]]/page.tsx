@@ -1,6 +1,6 @@
-import { getBlogs } from "@/api";
 import TagList from "@/app/blogs/[[...blogCategories]]/_components/TagList";
 import BlogCard from "@/components/BlogCard";
+import db from "@/lib/db/db";
 import { NextComponentPropsWithParams } from "@/types/next";
 import Link from "next/link";
 
@@ -12,7 +12,9 @@ type BlogsCategoryFilterPageProps = NextComponentPropsWithParams<{
  * This page acts as both the catch-all page as well as the main page for /blogs
  */
 const BlogsCategoryFilterPage = async ({ params }: BlogsCategoryFilterPageProps) => {
-  const blogs = await getBlogs();
+  // const blogs = await getBlogs();
+  const blogs = await db.blogs.find();
+
 
   // Catch all routes return data as an array of route params
   // ex: /blogs/x/y/z -> [x, y, z]

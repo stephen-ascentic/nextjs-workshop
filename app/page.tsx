@@ -1,9 +1,9 @@
 import Link from "next/link";
 import homePageClasses from "./page.module.css";
+
 import { getTime } from "@/api";
 
 export default async function Home() {
-
   const date = await getTime();
 
   return (
