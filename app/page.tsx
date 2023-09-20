@@ -6,9 +6,9 @@ export default function Home() {
     <main className={homePageClasses.introSection}>
       <div className="text-center">
         <h1>
-          Welcome to NextJS Series <span className="text-2xl">pt.2</span>
+          Welcome to NextJS Series <span className="text-2xl">pt.3</span>
         </h1>
-        <h2 className="text-2xl">Routing and Layouts</h2>
+        <h2 className="text-2xl">Exploring Data Fetching</h2>
       </div>
       <Link href="/blogs" className={homePageClasses.checkoutBlogsLink}>
         <p>Check out our blogs</p>

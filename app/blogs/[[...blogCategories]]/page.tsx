@@ -1,5 +1,5 @@
+import { getBlogs } from "@/api";
 import TagList from "@/app/blogs/[[...blogCategories]]/_components/TagList";
-import blogs, { Blog } from "@/assets/data/blogs";
 import BlogCard from "@/components/BlogCard";
 import { NextComponentPropsWithParams } from "@/types/next";
 import Link from "next/link";
@@ -11,11 +11,13 @@ type BlogsCategoryFilterPageProps = NextComponentPropsWithParams<{
 /**
  * This page acts as both the catch-all page as well as the main page for /blogs
  */
-const BlogsCategoryFilterPage = ({ params }: BlogsCategoryFilterPageProps) => {
+const BlogsCategoryFilterPage = async ({ params }: BlogsCategoryFilterPageProps) => {
+  const blogs = await getBlogs();
+
   // Catch all routes return data as an array of route params
   // ex: /blogs/x/y/z -> [x, y, z]
   const blogCategories = params.blogCategories;
-  let filteredBlogs: Blog[] = blogs;
+  let filteredBlogs = blogs;
 
   // If the blogCategories array is not empty, filter the blogs array
   if (blogCategories) {
