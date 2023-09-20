@@ -3,6 +3,7 @@ import { NextComponentPropsWithParams } from "@/types/next";
 import dayjs from "dayjs";
 import Link from "next/link";
 import blogClasses from "./page.module.css";
+import { getBlog } from "@/api";
 
 type BlogPageParams = {
   blogId: string;
@@ -14,15 +15,11 @@ type BlogPageProps = NextComponentPropsWithParams<BlogPageParams>;
  * `[blogId]` as the __folder name__ provides a params `object` with `blogId` as a key
  */
 export default async function BlogPage({ params }: BlogPageProps) {
-  const blog = blogs.find((b) => b.id === params.blogId);
-
-  if (!blog) {
-    return null;
-  }
+  const blog = await getBlog(params.blogId);
 
   return (
     <section className="my-8 flex flex-col gap-4">
-      <Link href=".." className="text-link with-icon">
+      <Link href="/blogs" className="text-link with-icon">
         <ion-icon name="arrow-back-outline"></ion-icon>
         <p>Back to blogs</p>
       </Link>
