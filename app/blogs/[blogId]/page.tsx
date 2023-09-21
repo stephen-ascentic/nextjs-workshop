@@ -1,9 +1,8 @@
-import blogs from "@/assets/data/blogs";
+import { getBlog } from "@/lib/api";
 import { NextComponentPropsWithParams } from "@/types/next";
 import dayjs from "dayjs";
 import Link from "next/link";
 import blogClasses from "./page.module.css";
-import { getBlog } from "@/api";
 
 type BlogPageParams = {
   blogId: string;
