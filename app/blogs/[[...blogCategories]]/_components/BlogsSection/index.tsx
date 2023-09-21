@@ -2,14 +2,15 @@ import TagList from "@/app/blogs/[[...blogCategories]]/_components/TagList";
 import BlogCard from "@/components/BlogCard";
 import Link from "next/link";
 import db from "@/lib/db/db";
+import { getBlogs } from "@/lib/api";
 
 type BlogsSectionProps = {
   blogCategories?: string[];
 };
 
 async function BlogsSection({ blogCategories }: BlogsSectionProps) {
-  // const blogs = await getBlogs();
-  const blogs = await db.blogs.find();
+  const blogs = await getBlogs();
+//   const blogs = await db.blogs.find();
 
   // Catch all routes return data as an array of route params
   // ex: /blogs/x/y/z -> [x, y, z]
