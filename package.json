@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "npm run start-mock & next dev",
+    "build": "npm run start-mock & next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "start-mock": "json-server --watch db.json --delay 1000 --port 8000"
   },
   "dependencies": {
     "@types/node": "20.5.9",
@@ -14,7 +15,8 @@
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
     "dayjs": "^1.11.9",
-    "next": "13.4.19",
+    "json-server": "^0.17.4",
+    "next": "^13.5.4",
     "postcss": "8.4.29",
     "react": "18.2.0",
     "react-dom": "18.2.0",

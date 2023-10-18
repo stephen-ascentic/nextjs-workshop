@@ -1,8 +1,7 @@
-import TagList from "@/app/blogs/[[...blogCategories]]/_components/TagList";
-import BlogCard from "@/components/BlogCard";
-import Link from "next/link";
-import db from "@/lib/db/db";
-import { getBlogs } from "@/lib/api";
+import TagList from '@/app/blogs/[[...blogCategories]]/_components/TagList';
+import BlogCard from '@/components/BlogCard';
+import { getBlogs } from '@/lib/api';
+import Link from 'next/link';
 
 type BlogsSectionProps = {
   blogCategories?: string[];
@@ -10,7 +9,6 @@ type BlogsSectionProps = {
 
 async function BlogsSection({ blogCategories }: BlogsSectionProps) {
   const blogs = await getBlogs();
-//   const blogs = await db.blogs.find();
 
   // Catch all routes return data as an array of route params
   // ex: /blogs/x/y/z -> [x, y, z]
@@ -18,11 +16,11 @@ async function BlogsSection({ blogCategories }: BlogsSectionProps) {
 
   // If the blogCategories array is not empty, filter the blogs array
   if (blogCategories) {
-    const filteredCategories = blogCategories.filter((c) => c !== "categories");
+    const filteredCategories = blogCategories.filter(c => c !== 'categories');
     if (filteredCategories?.length >= 1) {
       // Filter blogs array so that it only contains blogs that have all the tags in the blogCategories array
-      filteredBlogs = blogs.filter((blog) => {
-        return filteredCategories.every((category) => {
+      filteredBlogs = blogs.filter(blog => {
+        return filteredCategories.every(category => {
           return blog.tags.includes(category);
         });
       });
@@ -38,11 +36,11 @@ async function BlogsSection({ blogCategories }: BlogsSectionProps) {
         </Link>
       )}
       <h1>Blogs</h1>
-      <hr className="w-full mt-4" />
-      <TagList tags={[...new Set(filteredBlogs.flatMap((blog) => blog.tags))]} />
+      <hr className="w-full my-4" />
+      <TagList tags={[...new Set(filteredBlogs.flatMap(blog => blog.tags))]} />
       <div className="grid grid-cols-3 gap-4 mt-8">
-        {filteredBlogs.map((blog) => (
-          <Link href={`/blogs/${blog.id}`}>
+        {filteredBlogs.map(blog => (
+          <Link href={`/blogs/${blog.id}`} key={`blog-${blog.id}`} prefetch={false}>
             <BlogCard title={blog.title} description={blog.miniDescription} tags={blog.tags} />
           </Link>
         ))}

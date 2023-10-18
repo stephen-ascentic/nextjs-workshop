@@ -1,4 +1,4 @@
-function BlogsPageLoading() {
+async function BlogsPageLoading() {
   return (
     <div>
       <h1>Loading...</h1>

@@ -1,6 +1,8 @@
-import { NextComponentPropsWithParams } from "@/types/next";
-import BlogsSection from "./_components/BlogsSection";
-import { Suspense } from "react";
+import { NextComponentPropsWithParams } from '@/types/next';
+import BlogsSection from './_components/BlogsSection';
+
+//export const revalidate = 10;
+export const dynamic = 'force-dynamic';
 
 type BlogsCategoryFilterPageProps = NextComponentPropsWithParams<{
   blogCategories?: string[];
@@ -9,16 +11,13 @@ type BlogsCategoryFilterPageProps = NextComponentPropsWithParams<{
 /**
  * This page acts as both the catch-all page as well as the main page for /blogs
  */
-const BlogsCategoryFilterPage = ({ params }: BlogsCategoryFilterPageProps) => {
+export default function BlogsCategoryFilterPage({ params }: BlogsCategoryFilterPageProps) {
   return (
     <>
-      <h1>Hello</h1>
-      {/* <BlogsSection blogCategories={params.blogCategories} /> */}
-      <Suspense fallback={<p>Loading blogs...</p>}>
+      <BlogsSection blogCategories={params.blogCategories} />
+      {/* <Suspense fallback={<p>Loading blogs...</p>}>
         <BlogsSection blogCategories={params.blogCategories} />
-      </Suspense>
+      </Suspense> */}
     </>
   );
-};
-
-export default BlogsCategoryFilterPage;
+}
