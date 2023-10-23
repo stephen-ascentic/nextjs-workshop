@@ -19,27 +19,24 @@ export const getBlog = async (id: string) => {
 };
 
 export const getTime = async () => {
-  const res = await fetch("http://localhost:3000/api/time");
-  //   const res = await fetch("http://localhost:3000/api/time", { cache: "no-store" });
+  //   const res = await fetch("http://localhost:3000/api/time");
+  const res = await fetch("http://localhost:3000/api/time", { cache: "no-store" });
   //   const res = await fetch("http://localhost:3000/api/time", { next: { revalidate: 5 } });
   //   const res = await fetch("http://localhost:3000/api/time", { next: { tags: ["time"] } });
   const data = await res.json();
-  return data.date;
+  return data;
 };
 
 export const refreshTime = async () => {
   const res = await fetch("http://localhost:3000/api/time", { method: "POST" });
 };
-
+export const controller = new AbortController();
 export const getCategory = async () => {
-  //   const { signal } = new AbortController();
-  //   const res = await fetch("http://localhost:3000/api/categories");
-  //   const res = await fetch("http://localhost:3000/api/categories", { signal });
+  const res = await fetch("http://localhost:3000/api/categories");
+  // const res = await fetch("http://localhost:3000/api/categories", { signal: controller.signal });
   //   const res = await fetch("http://localhost:3000/api/categories", { cache: "no-store" });
-  const res = await fetch("http://localhost:3000/api/categories", { next: { revalidate: 5 } });
+  //   const res = await fetch("http://localhost:3000/api/categories", { next: { revalidate: 10 } });
   //   const res = await fetch("http://localhost:3000/api/categories", { next: { tags: ["categories"] } });
-  //   revalidatePath("/");
-  //   revalidateTag("time");
   const category: string = await res.json();
 
   return category;

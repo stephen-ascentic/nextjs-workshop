@@ -1,12 +1,11 @@
-import { getCategory } from "@/lib/api";
+import { getTime } from "@/lib/api";
 
 const ChildServerComponent = async () => {
-  const category = await getCategory();
+  const time = await getTime();
 
   return (
     <div>
-      <h1>ChildServerComponent</h1>
-      <p>{category}</p>
+      <div className="text-black">Time : {time}</div>
     </div>
   );
 };

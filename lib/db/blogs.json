@@ -13,7 +13,8 @@
       "profilePictureUrl": "https://i.pravatar.cc/300",
       "introduction": "Software engineer trying to make sense of every line of code I write. Feminist. Prefers simple over complex. Latte lover. Blogger."
     },
-    "tags": ["typescript"]
+    "tags": ["typescript"],
+    "imageUrl": "https://unsplash.com/photos/person-using-macbook-pro-on-black-table-gWlBxOAgXgQ?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash"
   },
   {
     "id": "2",
@@ -29,7 +30,8 @@
       "profilePictureUrl": "https://i.pravatar.cc/300",
       "introduction": "A web developer and educator who loves sharing his knowledge and experience with others."
     },
-    "tags": ["typescript", "usecases"]
+    "tags": ["typescript", "usecases"],
+    "imageUrl": "https://unsplash.com/photos/person-using-macbook-pro-on-black-table-gWlBxOAgXgQ?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash"
   },
   {
     "id": "3",
@@ -45,7 +47,8 @@
       "profilePictureUrl": "https://i.pravatar.cc/300",
       "introduction": "A software developer, writer, speaker, and mentor who loves building things for the web."
     },
-    "tags": ["classes", "interfaces"]
+    "tags": ["classes", "interfaces"],
+    "imageUrl": "https://unsplash.com/photos/person-using-macbook-pro-on-black-table-gWlBxOAgXgQ?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash"
   },
   {
     "id": "4",
@@ -61,7 +64,8 @@
       "profilePictureUrl": "https://i.pravatar.cc/300",
       "introduction": "Software engineer trying to make sense of every line of code I write. Feminist. Prefers simple over complex. Latte lover. Blogger."
     },
-    "tags": ["typescript", "react"]
+    "tags": ["typescript", "react"],
+    "imageUrl": "https://unsplash.com/photos/person-using-macbook-pro-on-black-table-gWlBxOAgXgQ?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash"
   },
   {
     "id": "5",
@@ -77,6 +81,7 @@
       "profilePictureUrl": "https://i.pravatar.cc/300",
       "introduction": "A web developer and educator who loves sharing his knowledge and experience with others."
     },
-    "tags": ["typescript", "declaration", "usecases"]
+    "tags": ["typescript", "declaration", "usecases"],
+    "imageUrl": "https://unsplash.com/photos/person-using-macbook-pro-on-black-table-gWlBxOAgXgQ?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash"
   }
 ]

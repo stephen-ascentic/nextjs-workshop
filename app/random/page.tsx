@@ -12,10 +12,13 @@ export default async function page() {
   console.log(category);
 
   return (
-    <div>
-      <p>{Math.random()}</p>
-      <RefreshButton />
-      <Form />
+    <div className="m-auto text-center">
+      <h1>Random number</h1>
+      <div className="p-6 my-6 text-3xl font-bold shadow-2xl text-red-500">{Math.random()}</div>
+      <div className="flex gap-2 justify-center">
+        <RefreshButton />
+        <Form />
+      </div>
     </div>
   );
 }
