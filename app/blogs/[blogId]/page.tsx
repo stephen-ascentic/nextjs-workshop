@@ -24,8 +24,6 @@ export default async function BlogPage({ params }: BlogPageProps) {
   //   const headersList = headers();
   //   const referer = headersList.get("referer");
 
-  //   console.log(searchParams);
-
   if (!blog) {
     notFound();
   }

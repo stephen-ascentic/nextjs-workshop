@@ -9,7 +9,6 @@ export default async function page() {
   const category = await getCategory();
   //   const headersList = headers();
   //   const referer = headersList.get("referer");
-  console.log(category);
 
   return (
     <div className="m-auto text-center">
