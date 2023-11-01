@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm run start-mock & next dev",
-    "build": "npm run start-mock & next build",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "start-mock": "json-server --watch db.json --delay 1000 --port 8000"
