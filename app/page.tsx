@@ -8,7 +8,7 @@ export default function Home() {
     <main className={homePageClasses.introSection}>
       <div className="text-center">
         <h1>
-          Welcome to NextJS Series <span className="text-2xl">pt.3</span>
+          Welcome to NextJS Series Non Prod<span className="text-2xl">pt.3</span>
         </h1>
         <h2 className="text-2xl">Exploring Data Fetching</h2>
       </div>
